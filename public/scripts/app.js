@@ -20,7 +20,7 @@ $(`#loginGoogle`).on('click',(e)=>{
         var user = result.user;
         const client = new Client(user.displayName,user.photoURL);
         const socket = io.connect('http://localhost:9000');
-        $('.notConnected').replaceWith(`<div class='connected'>Connecté en tant que : ${result.user}</div>`);
+        $('.notConnected').replaceWith(`<div class='connected'><p>Connecté en tant que : <span>${result.user.displayName}</span></p></div>`);
         client.init();
         console.log(token, user)
         // ...
