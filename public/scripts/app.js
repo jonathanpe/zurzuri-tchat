@@ -19,7 +19,7 @@ $(`#loginGoogle`).on('click',(e)=>{
         // The signed-in user info.
         var user = result.user;
         const client = new Client(user.displayName,user.photoURL);
-        const socket = io.connect('http://localhost:9000');
+        const socket = io.connect('/');
         $('.notConnected').replaceWith(`<div class='connected'><p>Connecté en tant que : <span>${result.user.displayName}</span></p></div>`);
         client.init();
         console.log(token, user)
