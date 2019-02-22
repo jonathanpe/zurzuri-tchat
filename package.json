@@ -1,0 +1,22 @@
+{
+  "name": "websocketio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "ent": "^2.2.0",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "pug": "^2.0.3",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.7.2"
+  }
+}

@@ -1,0 +1,50 @@
+html
+  head
+    title= title
+    <script src="/lib/jquery.js" ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    link(rel="stylesheet",href="css/style.css")
+    link(rel="stylesheet",href="css/segoe-ui-3-cufonfonts-webfont/style.css")
+
+  body
+    <div class="Content">
+        <h1>Chat room avec Socket.io</h1>
+            <div class="connectInfos">
+                <div class="notConnected"><p><span>Vous n'êtes pas Connecté ! </span><a href="#" id='loginGoogle'>Connectez vous  pour Tchater en direct !</a></p></div>
+            </div>
+            <div class='chatContainer'>
+                <div class='windowLabel'>
+                    <h2>Fenêtre de chat</h2>
+                </div>
+                <div class="chatContent">
+                    <ul class='listChannels'>
+                        <li><strong>Channel</strong></li>
+                        <li><a  id="canalGeneral" href='#' data-channel='General'>General</a></li>
+                        <li><a href='#'data-channel='Gaming',id="canalGaming">Gaming</a></li>
+                        <li><a href='#'data-channel='Random',id="canalRandom">Random</a></li>
+                    </ul>
+                    <div id="chatMessages">
+                        <form class="submitMessage" type='submit' method="post">
+                            <input type="text" class="messageZone" placeholder="Tapez votre commentaire ici ">
+                            <button type='submit'>Valider</button>
+                        </form>
+                        <div id="messagesDisplayZone">
+                            
+                        </div>
+                        <div id="notificationTypingZone">
+                        </div>
+                    </div>
+                    <div id='usersList'>
+                        <h3>Utilisateurs Connectés</h3> 
+                        <ul>
+                            <li>test</li>
+                        </ul>
+                        <a class='disconnect' href="#">Deconnexion</a>
+                    </div>
+                </div>
+            </div>
+        script(src="//www.gstatic.com/firebasejs/5.8.4/firebase-app.js") 
+        script(src="//www.gstatic.com/firebasejs/5.8.4/firebase-auth.js")
+        <script src="/scripts/classes/Client.js"></script>
+        <script src="/scripts/app.js"></script>
+    </div>

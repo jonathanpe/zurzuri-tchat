@@ -1,0 +1,157 @@
+
+body{
+    background-color:#e4e9f2;
+    font-family :"Segoe UI";
+}
+.content{
+    width : 70%;
+    margin : 0 auto;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color:white;
+    font-weight:lighter;
+}
+
+.notConnected a{
+    color: #517dbf;
+    font-weight: bold;
+    margin-left:3px;
+}
+#messagesDisplayZone p{
+    display:flex;
+    align-items: center;
+}
+#messagesDisplayZone img{
+    margin-right : 5px;
+    width : 50px;
+    border-radius : 50px;
+}
+.notConnected img{
+    width:50px;
+}
+.notConnected span{
+    color : black;
+    font-style: italic;
+    font-weight: lighter;
+}
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+h1{
+    font-size:50px;
+    text-align:center;
+}
+h2{
+    margin:0;
+    padding:5px 0 5px 0;
+    background-color:#29487d;
+    text-transform: uppercase;
+    font-size:20px;
+    text-align: center;
+    color:white;
+}
+#interface{
+   display:flex;
+}
+.chatContainer{
+    margin:0 auto;
+    border:2px solid #29487d;
+    display:flex;
+    padding:5px;
+    flex-direction: column;
+    border-radius: 10px 0 0 10px;
+}
+#usersList{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width : 10%;
+    background-color:white;
+    border-left: 1px solid rgba(0,0,0,0.15);
+}
+#usersList a {
+	background: #f00;
+	border-radius: 3px;
+	padding: 2px;
+    margin-left: 4px;
+    color:white;
+}
+
+#users{
+	background-color: #29487d;
+	width: 7%;
+}
+.chatContent{
+    display:flex;
+}
+#notificationTypingZone{
+    padding-top: 30px;
+}
+.chatContent .listChannels{
+    margin:0;
+    /*background-color: #3b5998;*/
+    background-color: #517dbf;
+    color:white;
+    list-style:none;
+    width : 10%;
+}
+input{
+width:100%;
+}
+.chatContent .listChannels li{
+    margin-top:10px;
+}
+.chatContent .listChannels li:first-of-type{
+    text-align: center;
+    margin:20px 0;
+}
+.chatContent .listChannels li:not(:first-of-type){
+    margin-left:10px;
+}
+
+#usersList li{
+    padding:1px;
+    text-align:Left;
+    font-weight:bold;
+    margin-left:20px;
+}
+#usersList ul{
+    flex-grow:1;
+}
+
+p{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    margin :0;
+    padding:10px;
+}
+p span{
+    font-weight:bold;
+}
+#chatMessages{
+    display:flex;
+    flex-direction:column;
+    padding:20px 50px 20px 50px;
+    background-color:#f2f2f2;
+    flex-grow:1;
+    overflow:auto;
+    height:300px;
+}
+#chatMessages div:first-of-type{
+    overflow:scroll;
+    flex-grow:1
+}
+#chatMessages form{
+    background-color: #dde7f6;
+    padding: 10px;
+    border-radius:5px;
+    display:flex;
+}
+#chatMessages form button{
+    margin-left:5px;
+}
+
+
