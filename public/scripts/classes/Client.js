@@ -23,7 +23,6 @@ class Client {
             $(`#canal${canal}`).next().append(html);
             console.log(canal)
             console.log(userList)
-            console.log('dfdgdgfdfgfdgdfgdfg')
         })
         this.socket.on('user:list',(usernameList)=>{
             this.updateUsersList(usernameList);
@@ -77,8 +76,8 @@ class Client {
         let messageHistory='';
         console.log(history)
         $(history).each((index,message)=>{
-            console.log(message.content);
-            messageHistory+=`<p><span>${message.sender} :</span> ${emojify(message.content)}</p>`
+            console.log(message.message);
+            messageHistory+=`<p><span>${message.pseudo} :</span> ${emojify(message.message)}</p>`
         })
         $('#messagesDisplayZone').html(messageHistory)
         console.log(messageHistory);

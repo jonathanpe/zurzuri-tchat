@@ -60,6 +60,7 @@ class Chat {
     _onUserDisconnect(user){
          let index = this.users.indexOf(user);
         if(index > -1){
+            this.getChannelById(this.users.channelId).removeUser();
            this.users.splice(index, 1) 
             user.destroy();
            this.io.sockets.emit('user:list',this.getUsernameList())
