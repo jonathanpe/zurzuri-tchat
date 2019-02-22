@@ -72,12 +72,12 @@ class Client {
             $('#notificationTypingZone').empty()
         },5000)
     }
-    displayMessagesHistory(history,photoUrl){
+    displayMessagesHistory(history){
         let messageHistory='';
         console.log(history)
         $(history).each((index,message)=>{
             console.log(message.message);
-            messageHistory+=`<p><img src=${photoUrl} <span>${message.pseudo} :</span> ${emojify(message.message)}</p>`
+            messageHistory+=`<p><img src=${message.photoUrl} <span>${message.pseudo} :</span> ${emojify(message.message)}</p>`
         })
         $('#messagesDisplayZone').html(messageHistory)
         console.log(messageHistory);

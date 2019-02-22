@@ -34,7 +34,7 @@ class Chat {
             })
             //Ajout d'un utilisateur à la liste 
             this.users.push(user)
-            socket.emit('message:history',this.getMessagesList(),photoUrl);
+            socket.emit('message:history',this.getMessagesList());
             this.io.sockets.emit('user:list',this.getUsernameList());
             socket.on('message:new', (message) => {this._onNewMessage(socket, user, message)}) 
             socket.on('disconnect',()=> this._onUserDisconnect(user))
